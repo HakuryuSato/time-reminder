@@ -13,10 +13,11 @@ def main():
     while True:
         current_time = time.localtime()
         current_minute, current_second = current_time.tm_min, current_time.tm_sec
+        formatted_time = time.strftime("%m/%d/%H:%M", current_time)
         if current_second == 0 and current_minute in intervals:
             beep(intervals[current_minute])
             # notification.notify(title="time-reminder", message="its time") # 通知
-            formatted_time = time.strftime("%m/%d/%H:%M", current_time)
+            
             print("ビープしました:",formatted_time) # ビープ音
             time.sleep(60)  # 鳴動後1分間スリープ
 
