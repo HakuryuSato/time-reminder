@@ -6,8 +6,8 @@ def beep(duration):
     freq = 1000  # 音の周波数(Hz)
     winsound.Beep(freq, duration)
     
-# intervals = {0: 1000, 15: 250, 30: 500, 45: 250}  # 分単位の時間とビープの長さ(ミリ秒) 15分ごと
-intervals = {0: 1000, 30: 500}  # 30分ごと
+# 0: 1000 -> 0分に1000ミリ秒間鳴動
+intervals = {0: 1500, 30: 1000}  # 30分ごと
 
 def main():
     while True:
